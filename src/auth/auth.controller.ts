@@ -13,7 +13,7 @@ export class AuthController {
     return this.authService.register(dto.email, dto.password, dto.role);
   }
 
-  @Throttle(5, 60)
+  
   @Post('login')
   login(@Body() dto: LoginDto) {
     return this.authService.login(dto.email, dto.password);

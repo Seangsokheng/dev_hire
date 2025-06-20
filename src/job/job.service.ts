@@ -14,7 +14,7 @@ export class JobService {
     @InjectRepository(Job) private jobRepo: Repository<Job>,
   ) {}
 
-  async create(createDto: CreateJobDto, user: { userId : string }) {
+  async create(createDto: CreateJobDto, user: { userId : number }) {
 
     const job = this.jobRepo.create({ ...createDto, company : { id: user.userId } });
     return await this.jobRepo.save(job);
@@ -42,13 +42,13 @@ export class JobService {
     return { data, total, page: +page, limit: +limit };
   }
 
-  async findOne(id: string) {
+  async findOne(id: number) {
     const job = await this.jobRepo.findOne({ where: { id }, relations: ['company'] });
     if (!job) throw new NotFoundException('Job not found');
     return job;
   }
 
-  async delete(id: string, user: User) {
+  async delete(id: number, user: User) {
     const job = await this.findOne(id);
     if (job.company.id !== user.id) throw new NotFoundException('Not your job');
     return await this.jobRepo.remove(job);

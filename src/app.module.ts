@@ -12,12 +12,6 @@ import * as redisStore from 'cache-manager-redis-yet';
 
 @Module({
   imports: [
-    ThrottlerModule.forRoot({
-      throttler: {
-        ttl: 60,   // Time window in seconds
-        limit: 10, // Max 10 requests per window
-      },
-    }),
     CacheModule.registerAsync({
       useFactory: () => ({
         store: redisStore,

@@ -16,7 +16,7 @@ export class ApplicationService {
     private jobRepo: Repository<Job>,
   ) {}
 
-  async apply(jobId: string, userId: string, filename: string) {
+  async apply(jobId: number, userId: number, filename: string) {
     const user = await this.userRepo.findOne({ where: { id: userId } });
     const job = await this.jobRepo.findOne({ where: { id: jobId } });
 
