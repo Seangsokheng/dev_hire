@@ -6,6 +6,7 @@ import { CreateJobDto } from './dto/create-job.dto';
 import { QueryJobDto } from './dto/query-job.dto';
 import { User } from '../user/user.entity';
 import { CACHE_MANAGER } from '@nestjs/cache-manager';
+import { Cache } from 'cache-manager';
 
 @Injectable()
 export class JobService {
@@ -14,9 +15,8 @@ export class JobService {
     @InjectRepository(Job) private jobRepo: Repository<Job>,
   ) {}
 
-  async create(createDto: CreateJobDto, user: { userId : number }) {
-
-    const job = this.jobRepo.create({ ...createDto, company : { id: user.userId } });
+  async create(createDto: CreateJobDto, user: { userId: number }) {
+    const job = this.jobRepo.create({ ...createDto, company: { id: user.userId } });
     return await this.jobRepo.save(job);
   }
 
@@ -27,19 +27,35 @@ export class JobService {
       sortOrder = 'desc',
       page = '1',
       limit = '10',
+      include,
     } = query;
 
     const where = title ? { title: ILike(`%${title}%`) } : {};
+    const relations = include
+      ? include.split(',').map((rel) => rel.trim())
+      : ['company'];
+
+    const cacheKey = `jobs:${title || 'all'}:${sortBy}:${sortOrder}:${page}:${limit}:${include || 'default'}`;
+
+    const cached = await this.cacheManager.get(cacheKey);
+    console.log('cache get result:', cached);
+    if (cached) {
+      console.log(`✅ Returned jobs from cache: ${cacheKey}`);
+      return cached;
+    }
 
     const [data, total] = await this.jobRepo.findAndCount({
       where,
-      relations: ['company'],
+      relations,
       order: { [sortBy]: sortOrder.toUpperCase() as 'ASC' | 'DESC' },
       skip: (parseInt(page) - 1) * parseInt(limit),
       take: parseInt(limit),
     });
 
-    return { data, total, page: +page, limit: +limit };
+    const result = { data, total, page: +page, limit: +limit };
+    await this.cacheManager.set(cacheKey, result, 60); // cache for 60 seconds
+
+    return result;
   }
 
   async findOne(id: number) {

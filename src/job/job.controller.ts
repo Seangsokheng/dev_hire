@@ -23,14 +23,14 @@ export class JobController {
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
+  findOne(@Param('id') id: number) {
     return this.jobService.findOne(id);
   }
 
   @Delete(':id')
   @UseGuards(JwtAuthGuard, RolesGuard)
   @Roles('COMPANY')
-  delete(@Param('id') id: string, @Request() req) {
+  delete(@Param('id') id: number, @Request() req) {
     return this.jobService.delete(id, req.user);
   }
 }

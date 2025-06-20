@@ -8,16 +8,16 @@ import { JobModule } from './job/job.module';
 import { ApplicationModule } from './application/application.module';
 import { ThrottlerModule } from '@nestjs/throttler';
 import { CacheModule } from '@nestjs/cache-manager';
-import * as redisStore from 'cache-manager-redis-yet';
+import * as redisStore from 'cache-manager-ioredis';
 
 @Module({
   imports: [
     CacheModule.registerAsync({
-      useFactory: () => ({
+      useFactory: async () => ({
         store: redisStore,
-        host: 'localhost',
+        host: 'redis',
         port: 6379,
-        ttl: 10, // default 10 seconds
+        ttl: 60, // default 60 seconds
       }),
       isGlobal: true,
     }),

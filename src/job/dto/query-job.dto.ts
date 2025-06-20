@@ -20,4 +20,8 @@ export class QueryJobDto {
   @IsOptional()
   @IsNumberString()
   limit?: string;
+
+  @IsOptional()
+  @IsString()
+  include?: string;
 }

@@ -1,9 +1,9 @@
 import { Injectable, NotFoundException } from "@nestjs/common";
 import { InjectRepository } from "@nestjs/typeorm";
-import { User } from "src/user/user.entity";
+import { User } from "../user/user.entity";
 import { Repository } from "typeorm";
 import { Application } from "./application.entity";
-import { Job } from "src/job/job.entity";
+import { Job } from "../job/job.entity";
 
 @Injectable()
 export class ApplicationService {
@@ -17,13 +17,13 @@ export class ApplicationService {
   ) {}
 
   async apply(jobId: number, userId: number, filename: string) {
-    const user = await this.userRepo.findOne({ where: { id: userId } });
+    
     const job = await this.jobRepo.findOne({ where: { id: jobId } });
 
-    if (!user || !job) throw new NotFoundException();
+    if (!userId || !job) throw new NotFoundException();
 
     const app = this.appRepo.create({
-      user,
+      user: { id: userId } as User,
       job,
       cvUrl: `/uploads/cv/${filename}`,
     });

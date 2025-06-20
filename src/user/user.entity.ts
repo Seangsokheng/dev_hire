@@ -1,5 +1,5 @@
-import { Application } from 'src/application/application.entity';
-import { Job } from 'src/job/job.entity';
+import { Application } from '../application/application.entity';
+import { Job } from '../job/job.entity';
 import { Entity, PrimaryGeneratedColumn, Column, CreateDateColumn, OneToMany } from 'typeorm';
 
 

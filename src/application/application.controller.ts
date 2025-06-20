@@ -39,7 +39,7 @@ export class ApplicationController {
     },
   }))
   uploadCv(
-    @Param('jobId') jobId: string,
+    @Param('jobId') jobId: number,
     @UploadedFile() file: Express.Multer.File,
     @Request() req
   ) {
