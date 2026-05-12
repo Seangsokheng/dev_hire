@@ -1,6 +1,6 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36">
   <diagram name="Page-1" id="QPPTCBc3PNT3X4ZC3Luq">
-    <mxGraphModel dx="2060" dy="1054" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2289" dy="1171" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -689,16 +689,16 @@
         <mxCell id="x4_Iyx1Ls0lwijKuGl4g-1" parent="1" style="swimlane;startSize=0;" value="" vertex="1">
           <mxGeometry height="830" width="470" x="1800" y="1460" as="geometry" />
         </mxCell>
-        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-2" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="init register" vertex="1">
+        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-2" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;font&gt;User Registration Initiation&lt;/font&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="80" as="geometry" />
         </mxCell>
-        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-3" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="confirm otp" vertex="1">
+        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-3" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;font&gt;OTP Verification&lt;/font&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="158.35" as="geometry" />
         </mxCell>
-        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-4" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="sent login otp" vertex="1">
+        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-4" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;font&gt;OTP Generation &amp;amp; Dispatch&lt;/font&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="238.35" as="geometry" />
         </mxCell>
-        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-5" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="login" vertex="1">
+        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-5" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif;&quot;&gt;&lt;font&gt;Account Authentication (Login)&lt;/font&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="328.35" as="geometry" />
         </mxCell>
         <mxCell id="x4_Iyx1Ls0lwijKuGl4g-7" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="Basic auth&amp;nbsp;" vertex="1">
@@ -755,7 +755,7 @@
         <mxCell id="x4_Iyx1Ls0lwijKuGl4g-39" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" value="&lt;span style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Mobile PiPay&lt;/b&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="30" width="120" x="175" y="8" as="geometry" />
         </mxCell>
-        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-40" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="ekyc submit" vertex="1">
+        <mxCell id="x4_Iyx1Ls0lwijKuGl4g-40" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif;&quot;&gt;&lt;font&gt;eKYC Document Submission&lt;/font&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="410" as="geometry" />
         </mxCell>
         <mxCell id="x4_Iyx1Ls0lwijKuGl4g-42" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="Temp jwt token" vertex="1">
@@ -770,7 +770,7 @@
         <mxCell id="x4_Iyx1Ls0lwijKuGl4g-46" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
           <mxGeometry height="30" width="60" x="230" y="423.35" as="geometry" />
         </mxCell>
-        <mxCell id="X8Zh3A3_OKTdFjI16L2a-1" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="salary range" vertex="1">
+        <mxCell id="X8Zh3A3_OKTdFjI16L2a-1" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif;&quot;&gt;&lt;font&gt;Financial &amp;amp; Residency Profiling&lt;/font&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="490" as="geometry" />
         </mxCell>
         <mxCell id="X8Zh3A3_OKTdFjI16L2a-4" edge="1" parent="x4_Iyx1Ls0lwijKuGl4g-1" source="X8Zh3A3_OKTdFjI16L2a-1" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="x4_Iyx1Ls0lwijKuGl4g-42" value="">
@@ -782,7 +782,7 @@
         <mxCell id="X8Zh3A3_OKTdFjI16L2a-5" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;rotation=0;" value="&amp;lt;&amp;lt;include&amp;gt;&amp;gt;" vertex="1">
           <mxGeometry height="30" width="60" x="230" y="478.35" as="geometry" />
         </mxCell>
-        <mxCell id="X8Zh3A3_OKTdFjI16L2a-7" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="Ocupation" vertex="1">
+        <mxCell id="X8Zh3A3_OKTdFjI16L2a-7" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif;&quot;&gt;&lt;font&gt;Geographic Profiling (Commune)&lt;/font&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="570" as="geometry" />
         </mxCell>
         <mxCell id="X8Zh3A3_OKTdFjI16L2a-8" edge="1" parent="x4_Iyx1Ls0lwijKuGl4g-1" source="X8Zh3A3_OKTdFjI16L2a-7" style="endArrow=classic;html=1;rounded=0;entryX=0.067;entryY=0.756;entryDx=0;entryDy=0;entryPerimeter=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="x4_Iyx1Ls0lwijKuGl4g-42" value="">
@@ -797,7 +797,7 @@
         <mxCell id="X8Zh3A3_OKTdFjI16L2a-10" edge="1" parent="x4_Iyx1Ls0lwijKuGl4g-1" source="X8Zh3A3_OKTdFjI16L2a-9" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="X8Zh3A3_OKTdFjI16L2a-9">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
-        <mxCell id="X8Zh3A3_OKTdFjI16L2a-11" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="ekyc token&amp;nbsp;" vertex="1">
+        <mxCell id="X8Zh3A3_OKTdFjI16L2a-11" parent="x4_Iyx1Ls0lwijKuGl4g-1" style="ellipse;whiteSpace=wrap;html=1;" value="&lt;span style=&quot;font-family: &amp;quot;Times New Roman&amp;quot;, serif;&quot;&gt;&lt;font&gt;Sumsub SDK Tokenization&lt;/font&gt;&lt;/span&gt;" vertex="1">
           <mxGeometry height="70" width="120" x="80" y="650" as="geometry" />
         </mxCell>
         <mxCell id="X8Zh3A3_OKTdFjI16L2a-12" edge="1" parent="x4_Iyx1Ls0lwijKuGl4g-1" source="X8Zh3A3_OKTdFjI16L2a-11" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=1;entryDx=0;entryDy=0;dashed=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" target="x4_Iyx1Ls0lwijKuGl4g-42" value="">
